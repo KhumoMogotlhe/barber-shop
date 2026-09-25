@@ -1,24 +1,41 @@
-import { buildGoogleCalendarUrl, downloadIcs } from '../lib/calendar';
-import { getServiceById } from '../data/services';
-import { getBarberById } from '../data/barbers';
-import type { Booking } from '../types';
+import styled from 'styled-components';
+import { Container } from '../components/ui/Container';
+import BookingWizard from '../features/booking/BookingWizard';
 
-const booking: Booking = {
-  id: 'SL-TEST01',
-  serviceId: 'skin-fade',
-  barberId: 'thabo',
-  date: '2026-09-26',
-  time: '15:00',
-  customer: { name: 'Test', email: 'test@example.com', phone: '0820000000' },
-  createdAt: new Date().toISOString(),
-};
+const Intro = styled.section`
+  padding: ${({ theme }) => `${theme.space.xxl} 0 ${theme.space.xl}`};
+  background: ${({ theme }) => theme.colors.primary};
+  color: ${({ theme }) => theme.colors.textOnPrimary};
+
+  h1 {
+    font-size: ${({ theme }) => theme.fontSizes.xxl};
+  }
+
+  p {
+    max-width: 520px;
+    margin-top: ${({ theme }) => theme.space.md};
+    color: ${({ theme }) => theme.colors.textMutedOnPrimary};
+  }
+`;
+
+const Body = styled.section`
+  padding: ${({ theme }) => `${theme.space.xl} 0 ${theme.space.section}`};
+`;
 
 export default function Book() {
-  const input = { booking, service: getServiceById('skin-fade')!, barber: getBarberById('thabo')! };
   return (
-    <div style={{ padding: '4rem 1rem', display: 'flex', gap: '1rem' }}>
-      <a href={buildGoogleCalendarUrl(input)} target="_blank" rel="noopener noreferrer">Google Calendar</a>
-      <button onClick={() => downloadIcs(input)}>Download .ics</button>
-    </div>
+    <>
+      <Intro>
+        <Container>
+          <h1>Book your chair</h1>
+          <p>Pick a service, choose your barber and grab a time. It takes under a minute, and there's no deposit.</p>
+        </Container>
+      </Intro>
+      <Body>
+        <Container>
+          <BookingWizard />
+        </Container>
+      </Body>
+    </>
   );
 }
