@@ -1,6 +1,6 @@
 export const business = {
-  name: 'Sharp/Line Barber Studio',
-  shortName: 'Sharp/Line',
+  name: 'Sharp/FADE Barber Studio',
+  shortName: 'Sharp/FADE',
   tagline: 'Fresh fades. Zero wait.',
   description:
     'A modern barber studio for sharp fades, clean lines and proper beard work. Book online, show up, sit straight down.',
@@ -14,7 +14,7 @@ export const business = {
   },
   phone: '+27 10 500 4821',
   phoneHref: 'tel:+27105004821',
-  email: 'hello@sharplinestudio.co.za',
+  email: 'hello@sharpfadestudio.co.za',
   timezone: 'Africa/Johannesburg',
   socials: [
     { label: 'Instagram', href: 'https://www.instagram.com/', icon: 'instagram' },

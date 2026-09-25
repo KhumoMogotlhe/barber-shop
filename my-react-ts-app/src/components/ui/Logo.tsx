@@ -53,7 +53,7 @@ export const Logo = () => (
   <Wrap to="/" aria-label="Sharp/Line Barber Studio, home">
     <LogoMark />
     <Word>
-      SHARP<span>/</span>LINE
+      SHARP<span>/</span>FADE
     </Word>
   </Wrap>
 );

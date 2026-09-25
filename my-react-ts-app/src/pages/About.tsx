@@ -98,7 +98,7 @@ export default function About() {
       <PageHeader
         eyebrow="About us"
         title="Built by a barber who hated waiting"
-        intro="Sharp/Line started with one chair and one rule: if you book a time, you get that time."
+        intro="Sharp/FADE started with one chair and one rule: if you book a time, you get that time."
       />
 
       <Section>
@@ -106,7 +106,7 @@ export default function About() {
           <Story>
             <img
               src="/images/interior.webp"
-              alt="Inside the Sharp/Line studio in Braamfontein"
+              alt="Inside the Sharp/FADE studio in Braamfontein"
               width={1600}
               height={1200}
               loading="lazy"
@@ -115,7 +115,7 @@ export default function About() {
               <SectionHeader eyebrow="Our story" title="From one chair to a full crew" />
               <p>
                 After ten years cutting in busy walk-in shops, Thabo Mokoena was tired of watching clients
-                lose their lunch hour in a queue. In {business.founded} he opened Sharp/Line in Braamfontein
+                lose their lunch hour in a queue. In {business.founded} he opened Sharp/FADE in Braamfontein
                 with a simple idea: a proper barbershop where the appointment time actually means something.
               </p>
               <p>

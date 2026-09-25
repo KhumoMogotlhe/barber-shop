@@ -73,7 +73,7 @@ export const buildIcs = (input: CalendarEventInput) => {
   const lines = [
     'BEGIN:VCALENDAR',
     'VERSION:2.0',
-    'PRODID:-//Sharp Line Barber Studio//Bookings//EN',
+    'PRODID:-//Sharp FADE Barber Studio//Bookings//EN',
     'CALSCALE:GREGORIAN',
     'METHOD:PUBLISH',
     'BEGIN:VTIMEZONE',
@@ -86,7 +86,7 @@ export const buildIcs = (input: CalendarEventInput) => {
     'END:STANDARD',
     'END:VTIMEZONE',
     'BEGIN:VEVENT',
-    `UID:${input.booking.id}@sharplinestudio.co.za`,
+    `UID:${input.booking.id}@sharpfadestudio.co.za`,
     `DTSTAMP:${utcStamp()}`,
     `DTSTART;TZID=${tz}:${event.start}`,
     `DTEND;TZID=${tz}:${event.end}`,
@@ -96,7 +96,7 @@ export const buildIcs = (input: CalendarEventInput) => {
     'STATUS:CONFIRMED',
     'BEGIN:VALARM',
     'ACTION:DISPLAY',
-    'DESCRIPTION:Your Sharp/Line appointment is in 1 hour',
+    'DESCRIPTION:Your Sharp/FADE appointment is in 1 hour',
     'TRIGGER:-PT1H',
     'END:VALARM',
     'END:VEVENT',
@@ -111,7 +111,7 @@ export const downloadIcs = (input: CalendarEventInput) => {
   const url = URL.createObjectURL(blob);
   const link = document.createElement('a');
   link.href = url;
-  link.download = `sharpline-${input.booking.date}-${input.booking.time.replace(':', '')}.ics`;
+  link.download = `sharpfade-${input.booking.date}-${input.booking.time.replace(':', '')}.ics`;
   document.body.appendChild(link);
   link.click();
   link.remove();

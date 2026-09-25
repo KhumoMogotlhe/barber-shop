@@ -115,7 +115,7 @@ export default function Home() {
       <Section $variant="dark">
         <Container>
           <SectionHeader
-            eyebrow="Why Sharp/Line"
+            eyebrow="Why Sharp/FADE"
             title="A barber visit, minus the waiting"
             dark
           />

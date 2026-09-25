@@ -5,7 +5,7 @@ export const barbers: Barber[] = [
     id: 'thabo',
     name: 'Thabo Mokoena',
     role: 'Founder and head barber',
-    bio: 'Thabo opened Sharp/Line in 2019 after ten years cutting in Soweto and Rosebank. Precise, fast and obsessed with a clean blend.',
+    bio: 'Thabo opened Sharp/FADE in 2019 after ten years cutting in Soweto and Rosebank. Precise, fast and obsessed with a clean blend.',
     photo: '/images/barbers/thabo.webp',
     specialties: ['Skin fades', 'Tapers', 'Line-ups'],
     workingDays: [1, 2, 3, 4, 5, 6],
