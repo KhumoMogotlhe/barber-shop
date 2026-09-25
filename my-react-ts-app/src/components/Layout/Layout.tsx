@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Header from './header/Header';
 import Footer from './Footer/Footer';
 import ScrollToTop from './ScrollToTop';
+import PromoModal from '../PromoModal';
 
 const Page = styled.div`
   min-height: 100vh;
@@ -40,7 +41,7 @@ export default function Layout() {
         <Outlet />
       </Main>
       <Footer />
-      {/* PromoModal goes here later */}
+      <PromoModal />
     </Page>
   );
 }
